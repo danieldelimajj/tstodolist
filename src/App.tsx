@@ -50,13 +50,16 @@ function App() {
 
      setTaskList(updatedItems)
 
-     }
+     hideOrShowModal(false);
+
+     };
      
   return (
     <div>
       <Modal 
       children={<TaskForm btnText="Editar Tarefa" taskList={taskList} setTaskList={setTaskList}
       task={taskToUpdate}
+      handleUpdate={updateTask}
       />}
       />
       <Header />
